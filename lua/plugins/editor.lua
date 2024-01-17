@@ -165,6 +165,12 @@ return {
         mappings = {
           n = {},
         },
+        -- file_ignore_patters = {
+        --   "node_modules",
+        --   "build",
+        --   "dist",
+        --   "yarn.lock",
+        -- },
       })
       opts.pickers = {
         diagnostics = {

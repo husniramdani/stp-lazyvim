@@ -12,3 +12,14 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt.conceallevel = 0
   end,
 })
+
+-- vim.cmd([[
+--   autocmd FileType sql,mysql,psql lua require('cmp').setup.buffer({ sources = {{ name = 'vim-dadbod-completion' }} })
+-- ]])
+
+-- vim.api.nvim_create_autocmd("FileType", {
+--   pattern = { "sql", "mysql", "psql" },
+--   callback = function()
+--     require("cmp").setup.buffer({ sources = { { name = "vim-dadbod-completion" } } })
+--   end,
+-- })

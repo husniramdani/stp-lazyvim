@@ -12,6 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+  "tpope/vim-dadbod",
   spec = {
     -- add LazyVim and import its plugins
     {
@@ -19,7 +20,7 @@ require("lazy").setup({
       import = "lazyvim.plugins",
       opts = {
         transparent = true,
-        colorscheme = "tokyonight-night",
+        colorscheme = "tokyonight",
         news = {
           lazyvim = true,
           neovim = true,
