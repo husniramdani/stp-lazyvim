@@ -75,3 +75,4 @@ end)
 
 -- Create New Line
 keymap.set("i", "<C-Enter>", "<Esc>o", { noremap = true, silent = true })
+keymap.set("n", "<S-C-Enter>", "o<Esc>", { noremap = true, silent = true })
