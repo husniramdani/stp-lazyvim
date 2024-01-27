@@ -60,6 +60,10 @@ keymap.set("n", "<C-w><right>", "<C-w>>")
 keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
 
+-- Create New Line
+keymap.set("i", "<C-Enter>", "<Esc>o", opts)
+keymap.set("n", "<S-C-Enter>", "o<Esc>", opts)
+
 -- Diagnostics
 keymap.set("n", "<C-j>", function()
   vim.diagnostic.goto_next()
@@ -72,7 +76,3 @@ end)
 keymap.set("n", "<leader>i", function()
   require("craftzdog.lsp").toggleInlayHints()
 end)
-
--- Create New Line
-keymap.set("i", "<C-Enter>", "<Esc>o", { noremap = true, silent = true })
-keymap.set("n", "<S-C-Enter>", "o<Esc>", { noremap = true, silent = true })

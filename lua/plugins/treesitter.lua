@@ -20,7 +20,6 @@ return {
         "scss",
         "sql",
         "svelte",
-        "html",
       },
 
       -- matchup = {
