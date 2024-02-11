@@ -74,7 +74,7 @@ return {
           settings = {
             intelephense = {
               files = {
-                maxSize = 5000000; -- Set max file size for intelephense
+                maxSize = 5000000, -- Set max file size for intelephense
               },
             },
           },
@@ -145,8 +145,13 @@ return {
           },
         },
       },
-      setup = {},
+      setup = {
+        sources = {
+          { name = "nvim_lsp" },
+          { name = "luasnip" },
+          { name = "neorg" },
+        },
+      },
     },
   },
 }
-

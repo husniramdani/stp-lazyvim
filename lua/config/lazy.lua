@@ -12,7 +12,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  "tpope/vim-dadbod",
   spec = {
     -- add LazyVim and import its plugins
     {
@@ -20,7 +19,7 @@ require("lazy").setup({
       import = "lazyvim.plugins",
       opts = {
         transparent = true,
-        colorscheme = "tokyonight",
+        colorscheme = "tokyonight-storm",
         news = {
           lazyvim = true,
           neovim = true,
@@ -35,7 +34,7 @@ require("lazy").setup({
     -- { import = "lazyvim.plugins.extras.lang.markdown" },
     { import = "lazyvim.plugins.extras.lang.rust" },
     { import = "lazyvim.plugins.extras.lang.tailwind" },
-    -- { import = "lazyvim.plugins.extras.coding.copilot" },
+    { import = "lazyvim.plugins.extras.coding.copilot" },
     -- { import = "lazyvim.plugins.extras.dap.core" },
     -- { import = "lazyvim.plugins.extras.vscode" },
     { import = "lazyvim.plugins.extras.util.mini-hipatterns" },
