@@ -19,6 +19,7 @@ require("lazy").setup({
       import = "lazyvim.plugins",
       opts = {
         transparent = true,
+        -- colorscheme = "ayu",
         colorscheme = "tokyonight-storm",
         news = {
           lazyvim = true,
@@ -34,9 +35,9 @@ require("lazy").setup({
     -- { import = "lazyvim.plugins.extras.lang.markdown" },
     { import = "lazyvim.plugins.extras.lang.rust" },
     { import = "lazyvim.plugins.extras.lang.tailwind" },
-    { import = "lazyvim.plugins.extras.coding.copilot" },
+    -- { import = "lazyvim.plugins.extras.coding.copilot" },
     -- { import = "lazyvim.plugins.extras.dap.core" },
-    -- { import = "lazyvim.plugins.extras.vscode" },
+    { import = "lazyvim.plugins.extras.vscode" },
     { import = "lazyvim.plugins.extras.util.mini-hipatterns" },
     -- { import = "lazyvim.plugins.extras.test.core" },
     -- { import = "lazyvim.plugins.extras.coding.yanky" },

@@ -6,6 +6,7 @@ return {
   { "morhetz/gruvbox" },
   { "rebelot/kanagawa.nvim" },
   { "rose-pine/neovim" },
+  { "ayu-theme/ayu-vim" },
   {
     "tokyonight.nvim",
     opts = {

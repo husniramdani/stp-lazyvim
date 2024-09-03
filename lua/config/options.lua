@@ -1,4 +1,5 @@
 vim.g.mapleader = " "
+vim.g.lazyvim_prettier_needs_config = false
 
 vim.scriptencoding = "utf-8"
 vim.opt.encoding = "utf-8"
@@ -32,6 +33,7 @@ vim.opt.splitbelow = true -- Put new windows below current
 vim.opt.splitright = true -- Put new windows right of current
 vim.opt.splitkeep = "cursor"
 -- vim.opt.mouse = ""
+vim.opt.termguicolors = true
 
 -- Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
