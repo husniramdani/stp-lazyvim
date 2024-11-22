@@ -11,6 +11,7 @@ return {
           "shellcheck",
           "shfmt",
           "tailwindcss-language-server",
+          "styled",
           "typescript-language-server",
           "css-lsp",
           "intelephense", -- Ensure intelephense is included in the list for installation
