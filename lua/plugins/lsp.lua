@@ -2,20 +2,18 @@ return {
   -- tools
   {
     "williamboman/mason.nvim",
-    config = function()
-      require("mason").setup({
-        ensure_installed = {
-          "stylua",
-          "selene",
-          "luacheck",
-          "shellcheck",
-          "shfmt",
-          "tailwindcss-language-server",
-          "styled",
-          "typescript-language-server",
-          "css-lsp",
-          "intelephense", -- Ensure intelephense is included in the list for installation
-        },
+    opts = function(_, opts)
+      vim.list_extend(opts.ensure_installed, {
+        "stylua",
+        "selene",
+        "luacheck",
+        "shellcheck",
+        "shfmt",
+        "tailwindcss-language-server",
+        "styled",
+        "typescript-language-server",
+        "css-lsp",
+        "intelephense", -- Ensure intelephense is included in the list for installation
       })
     end,
   },

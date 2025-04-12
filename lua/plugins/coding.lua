@@ -1,42 +1,9 @@
 return {
-  -- Create annotations with one keybind, and jump your cursor in the inserted annotation
-  {
-    "danymat/neogen",
-    keys = {
-      {
-        "<leader>cc",
-        function()
-          require("neogen").generate({})
-        end,
-        desc = "Neogen Comment",
-      },
-    },
-    opts = { snippet_engine = "luasnip" },
-  },
-
   -- Incremental rename
   {
     "smjonas/inc-rename.nvim",
     cmd = "IncRename",
     config = true,
-  },
-
-  -- Refactoring tool
-  {
-    "ThePrimeagen/refactoring.nvim",
-    keys = {
-      {
-        "<leader>r",
-        function()
-          require("refactoring").select_refactor()
-        end,
-        mode = "v",
-        noremap = true,
-        silent = true,
-        expr = false,
-      },
-    },
-    opts = {},
   },
 
   -- Go forward/backward with square brackets
@@ -78,6 +45,46 @@ return {
     end,
   },
 
+  -- copilot
+  {
+    "zbirenbaum/copilot.lua",
+    opts = {
+      suggestion = {
+        auto_trigger = true,
+        keymap = {
+          accept = "<C-l>",
+          accept_word = "<M-l>",
+          accept_line = "<M-S-l>",
+          next = "<M-]>",
+          prev = "<M-[>",
+          dismiss = "<C-]>",
+        },
+      },
+      filetypes = {
+        markdown = true,
+        help = true,
+      },
+    },
+  },
+
+  -- Refactoring tool
+  {
+    "ThePrimeagen/refactoring.nvim",
+    keys = {
+      {
+        "<leader>r",
+        function()
+          require("refactoring").select_refactor()
+        end,
+        mode = "v",
+        noremap = true,
+        silent = true,
+        expr = false,
+      },
+    },
+    opts = {},
+  },
+
   {
     "simrat39/symbols-outline.nvim",
     keys = { { "<leader>cs", "<cmd>SymbolsOutline<cr>", desc = "Symbols Outline" } },
@@ -93,5 +100,20 @@ return {
     opts = function(_, opts)
       table.insert(opts.sources, { name = "emoji" })
     end,
+  },
+
+  -- Create annotations with one keybind, and jump your cursor in the inserted annotation
+  {
+    "danymat/neogen",
+    keys = {
+      {
+        "<leader>cc",
+        function()
+          require("neogen").generate({})
+        end,
+        desc = "Neogen Comment",
+      },
+    },
+    opts = { snippet_engine = "luasnip" },
   },
 }
